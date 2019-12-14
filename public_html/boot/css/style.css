@@ -1,0 +1,31 @@
+#header{
+    padding: 10px;
+    background: #bbb;
+    box-shadow: 0px 1px 4px #bbb;
+}
+#header a{
+    color: black;
+}
+#header a:hover{
+    text-decoration: none;
+}
+div[type=button]{
+    padding: 20px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+[type=button]:hover{
+    text-decoration: underline;
+    box-shadow: 0px 0px 3px #bbb;
+    opacity: .8;
+}
+th, td { white-space: nowrap; 
+    height: 10px;
+}
+div.dataTables_wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+tr { height: 20px; }

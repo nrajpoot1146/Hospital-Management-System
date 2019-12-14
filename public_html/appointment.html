@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>index.html</title>
+    <meta http-equiv="Cache-control" content="No-Cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="boot/css/bootstrap.min.css">
+    <link rel="stylesheet" href="boot/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="boot/css/datatables.min.css" />
+    <link rel="stylesheet" href="boot/css/sweetalert.min.css">
+    <script src="boot/js/jquery.js"></script>
+    <script src="boot/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="boot/css/style.css">
+</head>
+
+<body>
+    <div id="header">
+        <a href="http://127.0.0.1:5000">
+            <h2 class="text-center">Hospital Management</h2>
+        </a>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="text-left">
+                    <a href="http://127.0.0.1:5000">Dashboard</a>>Appointments
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <button style="bottom: 27px;" id="addpatient" class="mb-sm btn btn-primary" type="button">Book
+                    Appointment</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default" style="padding: 15px;">
+
+                    <div class="table-responsive">
+                        <table id="datatable4" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width:20%">Doctor Name</th>
+                                    <th style="width:25%">Patient Name</th>
+                                    <th style="width:15%">Appointment Date</th>
+                                    <th style="width:15%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="myModalLabel" class="modal-title">Appointment</h4>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form data-parsley-validate="" novalidate="" class="form-horizontal" id="detailform">
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Doctor</label>
+                            <div class="col-lg-10">
+                                <select required id="doctor_select" type="text" name="doc_id" class="form-control"
+                                    placeholder="Please select doctor"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Patient</label>
+                            <div class="col-lg-10">
+                                <select required id="patient_select" type="text" name="pat_id" class="form-control"
+                                    placeholder="Please select Patient"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Appointment date</label>
+
+                            <div class="col-lg-10">
+                                <input size="16" type="text" name="appointment_date" required
+                                    class="form-control form_datetime" value="" readonly>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+                    <button id="savethepatient" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="boot/js/parsley.min.js"></script>
+    <script src="boot/js/notify.min.js"></script>
+    <script src="boot/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="boot/js/sweetalert.min.js"></script>
+    <script src="boot/js/jquery.serializejson.js"></script>
+    <script type="text/javascript" src="boot/js/datatables.min.js"></script>
+    <script src="boot/js/ap.js"></script>
+</body>
+
+</html>

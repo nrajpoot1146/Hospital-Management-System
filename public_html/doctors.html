@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>index.html</title>
+    <meta http-equiv="Cache-control" content="No-Cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="boot/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="boot/css/datatables.min.css" />
+    <link rel="stylesheet" href="boot/css/sweetalert.min.css">
+
+    <script src="boot/js/jquery.js"></script>
+    <script src="boot/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="boot/css/style.css">
+</head>
+
+<body>
+    <div id="header">
+        <a href="http://127.0.0.1:5000">
+            <h2 class="text-center">Hospital Management</h2>
+        </a>
+    </div>
+
+    <div class="container text-center mt-5" id="dashboard">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="text-left">
+                    <a href="http://127.0.0.1:5000">Dashboard</a>>Doctor List
+                </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <button style="bottom: 27px;" id="adddoctor" class="mb-sm btn btn-primary" type="button">Add
+                    Doctor</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default" style="padding: 15px;">
+
+                    <div class="table-responsive">
+                        <table id="datatable4" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width:20%">First Name</th>
+                                    <th style="width:25%">Last Name</th>
+                                    <th style="width:15%">Adress</th>
+                                    <th style="width:15%">Phone Number</th>
+                                    <th style="width:15%">Speciality</th>
+                                    <th style="width:15%"></th>
+                                    <th style="width:15%"></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="myModalLabel" class="modal-title">Doctor</h4>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form data-parsley-validate="" novalidate="" class="form-horizontal" id="detailform">
+                        <div class="form-group">
+                            <label class="col-sm-4">First Name :</label>
+                            <div class="col-sm-8">
+                                <input required type="text" name="first_name" class="form-control"
+                                    placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4">Last Name :</label>
+                            <div class="col-sm-8">
+                                <input required type="text" name="last_name" class="form-control"
+                                    placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4">Mobile No.:</label>
+                            <div class="col-sm-8">
+                                <input required name="mb_no" type="text" class="form-control"
+                                    placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4">Address :</label>
+                            <div class="col-sm-8">
+                                <textarea required name="address" class="form-control" placeholder="Address"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4">Speciality :</label>
+                            <div class="col-sm-8">
+                                <input type="text" required name="speciality" class="form-control"
+                                    placeholder="Speciality"></textarea>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+                    <button id="savedoctor" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="boot/js/parsley.min.js"></script>
+    <script src="boot/js/notify.min.js"></script>
+    <script src="boot/js/sweetalert.min.js"></script>
+    <script src="boot/js/jquery.serializejson.js"></script> 1
+    <script type="text/javascript" src="boot/js/datatables.min.js"></script>
+    <script src="boot/js/dt.js"></script>
+</body>
+
+</html>
